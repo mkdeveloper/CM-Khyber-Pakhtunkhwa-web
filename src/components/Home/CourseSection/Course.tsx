@@ -27,7 +27,7 @@ const Qcards = ({ props }: { props: QcardsT }) => {
       <h2 className="text-2xl text-center md:text-justify font-bold tracking-tight text-custom-color sm:text-3xl">
         {props.LevelTitle}
       </h2>
-      <p className="mt-1 text-md leading-7 text-gray-600">{props.LevelDesc}</p>
+      {/* <p className="mt-1 text-md leading-7 text-gray-600">{props.LevelDesc}</p> */}
       <div className="mx-auto mt-12 grid max-w-2xl auto-rows-fr grid-cols-1 gap-6 sm:mt-16 lg:mx-0 lg:max-w-none lg:grid-cols-4">
         {props.courses.map((course) => (
           <Link
@@ -64,8 +64,6 @@ const Qcards = ({ props }: { props: QcardsT }) => {
 
 const CoreLevel = {
   LevelTitle: 'Applied GenAI Core Level (3 Quarters)',
-  LevelDesc:
-    'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Unde, vitae!',
   courses: [
     {
       id: 1,
@@ -96,8 +94,6 @@ const CoreLevel = {
 
 const MasteryLevel = {
   LevelTitle: 'Cloud Native GenAI Mastery Level (3 Quarters)',
-  LevelDesc:
-    'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Vero, ipsum!',
   courses: [
     {
       id: 4,
@@ -128,8 +124,6 @@ const MasteryLevel = {
 
 const PhysicalAI = {
   LevelTitle: 'Physical AI and Humanoids',
-  LevelDesc:
-    'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Vero, ipsum!',
   courses: [
     {
       id: 7,
