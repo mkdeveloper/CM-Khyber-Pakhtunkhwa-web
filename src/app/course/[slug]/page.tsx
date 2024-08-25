@@ -30,7 +30,15 @@ const CourseContent = async ({ params }: { params: { slug: string } }) => {
     return (
       <div className="mx-2 px-2 md:mx-5 md:px-10 pb-20 pt-10 bg-[#1eb2a6]/10 rounded-3xl min-h-dvh">
         <h1 className=" text-custom-color">{courseData.mainTitle}</h1>
-        <p className="text-base pt-3 font-bold ">{courseData.quarter}</p>
+        <p
+          className={`${
+            courseData.quarter.includes('Master the Future')
+              ? 'text-2xl pt-6 font-bold'
+              : 'text-base pt-3 font-bold'
+          } `}
+        >
+          {courseData.quarter}
+        </p>
         {courseData.description.map((description, index) => (
           <p key={index} className="leading-7 [&:not(:first-child)]:mt-6">
             {description}
