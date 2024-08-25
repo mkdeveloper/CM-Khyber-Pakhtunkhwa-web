@@ -23,7 +23,7 @@ export default function Courses() {
 
 const Qcards = ({ props }: { props: QcardsT }) => {
   return (
-    <div className="mx-auto pb-8 lg:max-w-4xl not:first:bg-red-300">
+    <div className="mx-auto pb-8 lg:max-w-4xl [&:not(:first-child)]:mt-5 ">
       <h2 className="text-2xl text-center md:text-justify font-bold tracking-tight text-custom-color sm:text-3xl">
         {props.LevelTitle}
       </h2>
