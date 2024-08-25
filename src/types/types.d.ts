@@ -41,7 +41,7 @@ export type ResultT = {
 
 export type QcardsT = {
   LevelTitle: string;
-  LevelDesc: string;
+  // LevelDesc: string;
   courses: {
     id: number;
     title: string;
