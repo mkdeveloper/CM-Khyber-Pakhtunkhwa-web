@@ -11,7 +11,7 @@ const getData = async ({ pathname }: { pathname: string }) => {
   const pathName = ForwardRequest(pathname);
 
   const res = await fetch(`${baseUrl}/api/${pathName}`, {
-    cache: 'no-cache',
+    cache: 'force-cache',
   });
 
   if (!res.ok) {
@@ -67,8 +67,8 @@ const CourseContent = async ({ params }: { params: { slug: string } }) => {
 
 export default CourseContent;
 
-// export async function generateStaticParams() {
-//   return possibleRoutes.map((route) => ({
-//     slug: route,
-//   }));
-// }
+export async function generateStaticParams() {
+  return possibleRoutes.map((route) => ({
+    slug: route,
+  }));
+}
