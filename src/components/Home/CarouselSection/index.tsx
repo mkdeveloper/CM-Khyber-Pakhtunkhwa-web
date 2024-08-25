@@ -13,7 +13,7 @@ export default function CarouselSection() {
             Frontier
           </p> */}
           <p className="mt-6 paragraph-center">
-            Today's pivotal technological trends are Cloud Native (CN),
+            Today&apos;s pivotal technological trends are Cloud Native (CN),
             Generative AI (GenAI), and Physical AI. Cloud Native technology
             offers a scalable and dependable platform for application operation,
             while AI equips these applications with intelligent, human-like
