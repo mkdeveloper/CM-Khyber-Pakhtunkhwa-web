@@ -1,4 +1,4 @@
-import { Child } from "@/types/types";
+import { Child } from '@/types/types';
 
 export const TextChild = ({ child }: { child: Child }) => {
   return (
@@ -10,7 +10,7 @@ export const TextChild = ({ child }: { child: Child }) => {
       {child.children
         ? child.children.map((grandchild, grandchildIndex) => (
             <div key={grandchildIndex} className="py-1">
-              {grandchild.type === "link" ? (
+              {grandchild.type === 'link' ? (
                 <a
                   href={grandchild.url}
                   target="_blank"
@@ -62,13 +62,32 @@ export const LinkChild = ({ child }: { child: Child }) => {
 
 export const GetChildComponent = (child: Child) => {
   switch (child.type) {
-    case "text":
+    case 'text':
       return <TextChild child={child} />;
-    case "video":
+    case 'video':
       return <VideoChild child={child} />;
-    case "link":
+    case 'link':
       return <LinkChild child={child} />;
     default:
       return null;
   }
 };
+
+export function ForwardRequest(pathname: string) {
+  switch (pathname) {
+    case 'introduction':
+      return 'course/introduction';
+    case 'q1':
+    case 'q2':
+    case 'q3':
+      return `course/core/${pathname}`;
+    case 'q4':
+    case 'q5':
+    case 'q6':
+      return `course/mastery/${pathname}`;
+    case 'q7':
+      return `course/physical/${pathname}`;
+    default:
+      return `course/optional/${pathname}`;
+  }
+}
