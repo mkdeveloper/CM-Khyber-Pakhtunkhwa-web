@@ -68,38 +68,51 @@
   body {
     @apply bg-background text-foreground;
   }
-
-
 }
 
 h1 {
-  @apply scroll-m-20 text-4xl font-extrabold tracking-tight lg:text-5xl first:mt-0
+  @apply scroll-m-20 text-4xl font-extrabold tracking-tight lg:text-5xl first:mt-0;
 }
 
 h2 {
-  @apply scroll-m-20 pb-3 pt-5 text-3xl font-semibold tracking-tight first:mt-0
+  @apply scroll-m-20 pb-3 pt-5 text-3xl font-semibold tracking-tight first:mt-0;
 }
 
 h3 {
-  @apply scroll-m-20 text-2xl font-semibold tracking-tight
+  @apply scroll-m-20 text-2xl font-semibold tracking-tight;
 }
 
 h4 {
-  @apply scroll-m-20 text-xl font-semibold tracking-tight
+  @apply scroll-m-20 text-xl font-semibold tracking-tight;
 }
 
 @layer utilities {
-
   /* Hide scrollbar for Chrome, Safari and Opera */
-    .no-scrollbar::-webkit-scrollbar {
-      display: none;
-    }
-  
-    /* Hide scrollbar for IE, Edge and Firefox */
-    .no-scrollbar {
-      -ms-overflow-style: none;
-      /* IE and Edge */
-      scrollbar-width: none;
-      /* Firefox */
-    }
+  .no-scrollbar::-webkit-scrollbar {
+    display: none;
+  }
+
+  /* Hide scrollbar for IE, Edge and Firefox */
+  .no-scrollbar {
+    -ms-overflow-style: none;
+    /* IE and Edge */
+    scrollbar-width: none;
+    /* Firefox */
+  }
+}
+
+.paragraph-center {
+  @apply text-lg text-justify leading-8 text-gray-600;
+}
+
+.heading-one {
+  @apply tracking-tight leading-7 mt-2 text-4xl font-bold sm:text-4xl;
+}
+
+.headingTwo {
+  @apply text-3xl bg-red-300;
+}
+
+.headingThree {
+  @apply text-xl;
 }
