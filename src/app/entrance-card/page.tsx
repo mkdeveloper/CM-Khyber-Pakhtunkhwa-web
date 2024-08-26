@@ -1,154 +1,44 @@
-'use client'
-import { zodResolver } from '@hookform/resolvers/zod'
-import { useForm } from 'react-hook-form'
-import React, { useState } from 'react'
-import { z } from 'zod'
-import {
-  Form,
-  FormControl,
-  FormField,
-  FormItem,
-  FormLabel,
-  FormMessage,
-} from '@/components/ui/form'
-import { Input } from '@/components/ui/input'
-import { EntranceCardRequirementsSchema } from '@/lib/zodValidation'
-import { Button } from '@/components/ui/button'
-import { toast } from 'sonner'
-import { EntranceCardT } from '@/types/types'
-import DownloadEntranceCard from '@/components/DownloadCard'
+import EntranceCard from '@/components/entrance-card/EntranceCard';
+import Link from 'next/link';
+import React from 'react';
 
-const EntranceCard = () => {
-  const [loading, setloading] = useState(false)
-  const [cardData, setCardData] = useState<EntranceCardT | null>(null)
+const EntranceCardPage = () => {
+  const Email = process.env.USER_EMAIL;
 
-  const form = useForm<z.infer<typeof EntranceCardRequirementsSchema>>({
-    resolver: zodResolver(EntranceCardRequirementsSchema),
-    defaultValues: {
-      cnic: '',
-      email: '',
-    },
-  })
-
-  const getCard = async (
-    data: z.infer<typeof EntranceCardRequirementsSchema>
-  ) => {
-    setloading(true)
-    const response = await fetch('/api/generateEntryTestCard', {
-      body: JSON.stringify(data),
-      method: 'POST',
-    })
-
-    const res = await response.json()
-
-    if (!response.ok) throw new Error(res.message)
-
-    return res
+  if (!Email) {
+    return (
+      <main className="grid min-h-full place-items-center bg-white px-6 py-24 sm:py-32 lg:px-8">
+        <div className="text-center">
+          <p className="text-base font-semibold text-custom-color">
+            Admissions are not open yet
+          </p>
+          <h1 className="mt-4 text-3xl font-bold tracking-tight text-gray-900 sm:text-5xl">
+            Please come back later
+          </h1>
+          {/* <p className='mt-6 text-base leading-7 text-gray-600'>
+        Sorry, we couldn’t find the page you’re looking for.
+      </p> */}
+          <div className="mt-10 flex items-center justify-center gap-x-6">
+            <Link
+              href="/"
+              className="rounded-md bg-custom-color px-3.5 py-2.5 text-sm font-semibold text-white shadow-sm hover:bg-custom-color focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-custom-color"
+            >
+              Go back home
+            </Link>
+            <a href="#" className="text-sm font-semibold text-gray-900">
+              Contact support <span aria-hidden="true">&rarr;</span>
+            </a>
+          </div>
+        </div>
+      </main>
+    );
   }
 
-  async function onSubmit(
-    data: z.infer<typeof EntranceCardRequirementsSchema>
-  ) {
-    console.log(data)
-
-    toast.promise(getCard(data), {
-      loading: `Getting Your Card ...`,
-      success: (data: EntranceCardT) => {
-        setCardData(data)
-        setloading(false)
-        return `Download Your Card`
-      },
-      error: (err) => {
-        setCardData(null)
-        setloading(false)
-        return `Failed to Fetch Student Data: ${err.message}`
-      },
-    })
-  }
-  console.log('Card', cardData)
   return (
-    <>
-      {!cardData ? (
-        <div className='flex min-h-full flex-1 flex-col justify-center py-12 sm:px-6 lg:px-8'>
-          <div className='sm:mx-auto sm:w-full sm:max-w-xl'>
-            <h1 className='mt-6 text-center text-3xl font-bold leading-9 tracking-tight text-custom-color'>
-              Download Admit Card
-            </h1>
-          </div>
+    <div>
+      <EntranceCard />
+    </div>
+  );
+};
 
-          <div className='mt-10 sm:mx-auto sm:w-full sm:max-w-lg'>
-            <div className='bg-white px-6 py-12 shadow-xl  sm:rounded-lg sm:px-12'>
-              <Form {...form}>
-                <form
-                  onSubmit={form.handleSubmit(onSubmit)}
-                  className='space-y-6'
-                  // action='#'
-                  // method='POST'
-                >
-                  <FormField
-                    control={form.control}
-                    name='email'
-                    render={({ field }) => (
-                      <FormItem className=' w-full'>
-                        <FormLabel>Email</FormLabel>
-                        <FormControl>
-                          <Input
-                            placeholder='Email'
-                            {...field}
-                            className={` ${
-                              form.formState.errors.email
-                                ? 'border-red-500 focus-visible:ring-red-500'
-                                : 'focus-visible:ring-custom-color'
-                            } `}
-                          />
-                        </FormControl>
-                        <FormMessage />
-                      </FormItem>
-                    )}
-                  />
-
-                  <FormField
-                    control={form.control}
-                    name='cnic'
-                    render={({ field }) => (
-                      <FormItem>
-                        <FormLabel>CNIC or B-Form Number</FormLabel>
-                        <FormControl>
-                          <Input
-                            placeholder='CNIC or B-Form Number'
-                            {...field}
-                            className={
-                              form.formState.errors.cnic
-                                ? 'border-red-500 focus-visible:ring-red-500'
-                                : 'focus-visible:ring-custom-color'
-                            }
-                          />
-                        </FormControl>
-                        <FormMessage />
-                      </FormItem>
-                    )}
-                  />
-
-                  <Button
-                    disabled={loading}
-                    className=' bg-custom-color hover:bg-custom-color'
-                    // disabled={!form.formState.isValid || !form.formState.isDirty}
-                    type='submit'
-                  >
-                    GET CARD
-                  </Button>
-                </form>
-              </Form>
-            </div>
-          </div>
-        </div>
-      ) : (
-        <div>
-          <DownloadEntranceCard data={cardData} />
-        </div>
-      )}
-    </>
-  )
-}
-
-export default EntranceCard
+export default EntranceCardPage;
