@@ -8,15 +8,15 @@ export const possibleRoutes = [
   'q6',
   'q7',
   'q8',
-  // 'healthandmedical',
-  // 'web3',
-  // 'metavers',
-  // 'genaiaccounting',
-  // 'genaiengg',
-  // 'genaisales',
-  // 'genaiauto',
-  // 'genaisec',
-]
+  'healthandmedical',
+  'web3',
+  'metavers',
+  'genaiaccounting',
+  'genaiengg',
+  'genaisales',
+  'genaiauto',
+  'genaisec',
+];
 // export const possibleRoutes = [
 //   'course/introduction',
 //   'course/core/q1',
@@ -60,7 +60,7 @@ export const industries: string[] = [
   'Transport',
   'Video Editing',
   'Other',
-]
+];
 
 export const formQualifications: string[] = [
   'Matric / O Levels',
@@ -68,7 +68,7 @@ export const formQualifications: string[] = [
   "Undergraduate (Bachelor's)",
   "Graduate (Master's)",
   'Post-Graduate (PhD)',
-]
+];
 
 export const years: string[] = [
   'Less then 1 year',
@@ -81,7 +81,7 @@ export const years: string[] = [
   '8 Years',
   '9 Years',
   '10+ Years',
-]
+];
 
 export const employmentType: string[] = [
   'Full-time',
@@ -92,7 +92,7 @@ export const employmentType: string[] = [
   'Internship',
   'Apprenticeship',
   'Seasonal',
-]
+];
 
 export const formCities: string[] = [
   'Islamabad',
@@ -330,4 +330,4 @@ export const formCities: string[] = [
   'Washuk',
   'Zhob',
   'Ziarat',
-]
+];
