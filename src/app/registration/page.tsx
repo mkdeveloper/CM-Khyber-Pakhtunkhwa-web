@@ -4,7 +4,7 @@ import Link from 'next/link';
 const RegistrationPage = () => {
   const email = process.env.USER_EMAIL;
 
-  if (!email) {
+  if (email === 'dummy') {
     return (
       <main className="grid min-h-full place-items-center bg-white px-6 py-24 sm:py-32 lg:px-8">
         <div className="text-center">

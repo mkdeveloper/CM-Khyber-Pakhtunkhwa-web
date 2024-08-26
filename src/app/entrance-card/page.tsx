@@ -5,7 +5,7 @@ import React from 'react';
 const EntranceCardPage = () => {
   const Email = process.env.USER_EMAIL;
 
-  if (!Email) {
+  if (Email === 'dummy') {
     return (
       <main className="grid min-h-full place-items-center bg-white px-6 py-24 sm:py-32 lg:px-8">
         <div className="text-center">
