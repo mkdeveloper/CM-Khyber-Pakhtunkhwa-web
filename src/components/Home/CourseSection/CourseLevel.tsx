@@ -6,7 +6,7 @@ import { QcardsT } from '@/types/types'
 const CourseLevel = ({ level }: { level: QcardsT }) => {
   return (
     <div className='mt-10  max-w-5xl mx-auto'>
-      <h2 className='text-3xl text-center md:text-justify  font-bold tracking-tight text-custom-color sm:text-4xl pb-10 leading-6'>
+      <h2 className='text-3xl text-center md:text-justify  font-bold tracking-tight text-custom-color sm:text-4xl pb-10'>
         {level.LevelTitle}
       </h2>
       <div className='mx-auto  grid max-w-2xl auto-rows-fr grid-cols-1 gap-8  lg:mx-0 lg:max-w-none lg:grid-cols-3'>

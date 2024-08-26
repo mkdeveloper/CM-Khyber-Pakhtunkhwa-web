@@ -31,7 +31,7 @@ export default function CarouselSection() {
             scalable systems will be at the heart of global progress, driving
             the biggest leap forward in the history of mankind.
           </p>
-          <div className=' mt-6 '>
+          <div className=' mt-6 max-w-4xl mx-auto '>
             <Image
               width={1920}
               height={1080}

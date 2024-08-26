@@ -11,6 +11,7 @@ import WaniaKazmi from '../../../public/kpk/team/wania_kazmi.jpeg'
 import IbtisamAhmed from '../../../public/kpk/team/ibtisam.jpg'
 import Rehan from '../../../public/kpk/team/rehan.jpg'
 import JahanzaibTayyab from '../../../public/kpk/team/jehanzeb.jpg'
+import GirlAvatar from '../../../public/kpk/team/girl_avatar.jpg'
 export const team = [
   {
     name: 'Zia Khan',
@@ -37,15 +38,16 @@ export const team = [
     role: 'Trainer PIAIC, Freelancer',
     imageUrl: KhubaibKhan,
   },
-  {
-    name: 'Saad Irfan',
-    role: 'Trainer PIAIC, Freelancer',
-    imageUrl: SaadIrfan,
-  },
+
   {
     name: 'Sajid Khan',
     role: 'Trainer PIAIC, Freelancer',
     imageUrl: SajidKhan,
+  },
+  {
+    name: 'Saad Irfan',
+    role: 'Trainer PIAIC, Freelancer',
+    imageUrl: SaadIrfan,
   },
   {
     name: 'M.Junaid Shaukat',
@@ -53,14 +55,29 @@ export const team = [
     imageUrl: MuhammadJunaidShaukat,
   },
   {
+    name: 'Wania Kazmi',
+    role: 'Trainer PIAIC, Freelancer',
+    imageUrl: WaniaKazmi,
+  },
+  {
     name: 'Usman Ashraf',
     role: 'Trainer PIAIC, Freelancer',
     imageUrl: UsmanAshraf,
   },
   {
-    name: 'Wania Kazmi',
+    name: 'Ayesha Nazish',
     role: 'Trainer PIAIC, Freelancer',
-    imageUrl: WaniaKazmi,
+    imageUrl: GirlAvatar,
+  },
+  {
+    name: 'Humera Aslam',
+    role: 'Trainer PIAIC, Freelancer',
+    imageUrl: GirlAvatar,
+  },
+  {
+    name: 'Bushra Hussain',
+    role: 'Trainer PIAIC, Freelancer',
+    imageUrl: GirlAvatar,
   },
 
   {

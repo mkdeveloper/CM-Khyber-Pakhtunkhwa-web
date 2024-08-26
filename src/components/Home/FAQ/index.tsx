@@ -73,9 +73,12 @@ const FAQ = () => {
     <div className='bg-white'>
       <div className='mx-auto max-w-7xl px-6 py-16 lg:px-8'>
         <div className='mx-auto  divide-y divide-gray-900/10'>
-          <h2 className='text-4xl font-bold leading-10 py-5 tracking-tight text-custom-color'>
+          <h2 className='text-4xl text-center leading-tight font-bold py-5 tracking-tight text-custom-color'>
             Frequently asked questions
           </h2>
+          {/* <h2 className='text-4xl text-center md:text-justify  font-bold tracking-tight text-custom-color sm:text-4xl pb-10'>
+            {level.LevelTitle}
+          </h2> */}
           <Accordion type='single' collapsible className='w-full'>
             {faqs.map((faq, index) => (
               <AccordionItem key={index} value={faq.question}>
