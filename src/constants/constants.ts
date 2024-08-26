@@ -1,3 +1,22 @@
+// export const possibleRoutes = [
+//   'introduction',
+//   'q1',
+//   'q2',
+//   'q3',
+//   'q4',
+//   'q5',
+//   'q6',
+//   'q7',
+//   'q8',
+//   'healthandmedical',
+//   'web3',
+//   'metavers',
+//   'genaiaccounting',
+//   'genaiengg',
+//   'genaisales',
+//   'genaiauto',
+//   'genaisec',
+// ]
 export const possibleRoutes = [
   'course/introduction',
   'course/core/q1',
