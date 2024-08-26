@@ -12,9 +12,9 @@ export default function CourseLayout({
     <section>
       <SheetMenu />
       <AdminPanelLayout>
-        <CourseHeader />
+        {/* <CourseHeader /> */}
         {children}
-        <CourseFooter />
+        {/* <CourseFooter /> */}
       </AdminPanelLayout>
     </section>
   )

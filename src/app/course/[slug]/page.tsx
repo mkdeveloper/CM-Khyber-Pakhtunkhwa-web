@@ -16,7 +16,7 @@ const getData = async ({ pathname }: { pathname: string }) => {
   console.log(pathname)
 
   const res = await fetch(`${baseUrl}/api/${pathName}`, {
-    // cache: 'force-cache',
+    cache: 'force-cache',
   })
 
   if (!res.ok) {
