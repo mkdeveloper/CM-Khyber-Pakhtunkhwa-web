@@ -17,25 +17,6 @@ export const possibleRoutes = [
   'genaiauto',
   'genaisec',
 ];
-// export const possibleRoutes = [
-//   'course/introduction',
-//   'course/core/q1',
-//   'course/core/q2',
-//   'course/core/q3',
-//   'course/mastery/q4',
-//   'course/mastery/q5',
-//   'course/mastery/q6',
-//   'course/physical/q7',
-//   'course/physical/q8',
-//   'course/optional/healthandmedical',
-//   'course/optional/web3',
-//   'course/optional/metavers',
-//   'course/optional/genaiaccounting',
-//   'course/optional/genaiengg',
-//   'course/optional/genaisales',
-//   'course/optional/genaiauto',
-//   'course/optional/genaisec',
-// ]
 
 export const industries: string[] = [
   'Software / IT',
