@@ -12,9 +12,10 @@ const getData = async ({ pathname }: { pathname: string }) => {
     throw new Error('BASE_URL environment variable is not set')
   }
 
-  const pathName = ForwardRequest(pathname)
+  // const pathName = ForwardRequest(pathname)
+  // console.log(pathName);
 
-  const res = await fetch(`${baseUrl}/api/${pathName}`, {
+  const res = await fetch(`${baseUrl}/api/${pathname}`, {
     cache: 'force-cache',
   })
 
