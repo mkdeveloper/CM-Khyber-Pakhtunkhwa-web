@@ -1,5 +1,7 @@
-import AdminPanelLayout from "@/components/admin-panel/admin-panel-layout"
-import { SheetMenu } from "@/components/admin-panel/sheet-menu"
+import AdminPanelLayout from '@/components/admin-panel/admin-panel-layout'
+import CourseFooter from '@/components/admin-panel/Footer'
+import CourseHeader from '@/components/admin-panel/Header'
+import { SheetMenu } from '@/components/admin-panel/sheet-menu'
 
 export default function CourseLayout({
   children, // will be a page or nested layout
@@ -8,14 +10,12 @@ export default function CourseLayout({
 }) {
   return (
     <section>
-          
-          
-          <SheetMenu />
+      <SheetMenu />
       <AdminPanelLayout>
-
+        <CourseHeader />
         {children}
+        <CourseFooter />
       </AdminPanelLayout>
-
     </section>
   )
 }

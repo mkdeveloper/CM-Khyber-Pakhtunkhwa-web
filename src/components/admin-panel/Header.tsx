@@ -1,17 +1,12 @@
-'use client'
-import { Dialog, NavButtons } from './navbar'
-import { usePathname } from 'next/navigation'
+import { Dialog, NavButtons } from '@/components/Header/navbar'
 import Link from 'next/link'
 import Image from 'next/image'
 import KP_Logo from '../../../public/kpk/kp_logo.png'
 import { cn } from '@/lib/utils'
-const Header = () => {
-  const pathname = usePathname()
+const CourseHeader = () => {
   return (
     <div
-      className={`mx-auto max-w-7xl flex h-full w-full justify-between px-3 py-5 lg:py-6 max-md:max-w-full max-md:flex-wrap md:justify-center xl:justify-between ${
-        pathname === '/' || pathname.startsWith('/course') ? 'hidden' : ''
-      }`}
+      className={`mx-auto max-w-7xl flex h-full w-full justify-between px-3 py-5 lg:py-6 max-md:max-w-full max-md:flex-wrap md:justify-center xl:justify-between`}
     >
       <div className='my-auto flex items-stretch justify-between gap-12 max-md:max-w-full max-md:flex-wrap'>
         <div className='flex lg:flex-1 outline-none'>
@@ -51,4 +46,4 @@ const Header = () => {
   )
 }
 
-export default Header
+export default CourseHeader

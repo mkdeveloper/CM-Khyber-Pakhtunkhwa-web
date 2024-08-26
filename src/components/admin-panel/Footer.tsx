@@ -1,15 +1,11 @@
-'use client'
-import navigationData from './NavigationData'
+import navigationData from '@/components/Footer/NavigationData'
 import Image from 'next/image'
-import { usePathname } from 'next/navigation'
-
 import KP_Logo from '../../../public/kpk/kp_logo.png'
 import Link from 'next/link'
 
-export default function Footer() {
-  const pathname = usePathname()
+export default function CourseFooter() {
   return (
-    <div className={`${pathname.startsWith('/course') ? 'hidden' : ''}`}>
+    <div>
       {/* Footer */}
       <footer
         className='relative mt-32 sm:mt-40'
