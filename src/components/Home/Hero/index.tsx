@@ -57,20 +57,20 @@ export default function Hero() {
               Cloud Computing
             </h1>
             <div className='mt-6 max-w-xl lg:mt-0 xl:col-end-1 xl:row-start-1'>
-              <p className='text-xl font-semibold font- leading-8 text-gray-900'>
-                Getting Khyber Pakhtunkhwa Ready For The $100 Trillion Global AI
-                Industrial Revolution
+              <p className='text-2xl font-semibold leading-8 text-gray-900'>
+                Getting Khyber Pakhtunkhwa Ready For The $100 Trillion
+                <br /> Global AI Industrial Revolution
               </p>
               <div className='my-10 flex sm:items-center items-start  flex-col sm:flex-row gap-6 '>
                 <Link
                   href={'/registration'}
-                  className={`bg-custom-color py-4 px-4 relative rounded-lg text-white hover:bg-transparent duration-300 hover:text-custom-color border border-custom-color`}
+                  className={`bg-custom-color py-4 px-4 font-semibold relative rounded-lg text-white hover:bg-transparent duration-300 hover:text-custom-color border border-custom-color`}
                 >
                   GET STARTED NOW <span aria-hidden='true'>→</span>
                 </Link>
                 <Link
                   href={'/course'}
-                  className={`bg-white py-4 px-4 relative rounded-lg text-custom-color hover:bg-transparent duration-300 hover:scale-105  border border-custom-color`}
+                  className={`bg-white py-4 px-4 relative font-semibold rounded-lg text-custom-color hover:bg-transparent duration-300 hover:scale-105  border border-custom-color`}
                 >
                   VIEW COURSE <span aria-hidden='true'>→</span>
                 </Link>

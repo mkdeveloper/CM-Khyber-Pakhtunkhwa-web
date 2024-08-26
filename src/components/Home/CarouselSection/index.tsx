@@ -1,19 +1,20 @@
-import Link from 'next/link';
-import { CarouselPlugin } from './Carousel';
-
+import Link from 'next/link'
+import { CarouselPlugin } from './Carousel'
+import ParagraphImage from '../../../../public/kpk/Generative-AI-ChatGPT.webp'
+import Image from 'next/image'
 export default function CarouselSection() {
   return (
-    <div className="bg-white py-12">
-      <div className="mx-auto max-w-7xl px-6 lg:px-8">
-        <div className="mx-auto lg:max-w-6xl max-w-3xl  md:text-center">
-          <h2 className="heading-one text-custom-color">
+    <div className='bg-white py-12'>
+      <div className='mx-auto max-w-7xl px-6 lg:px-8'>
+        <div className='mx-auto lg:max-w-6xl max-w-3xl  md:text-center'>
+          <h2 className='text-3xl font-bold tracking-tight text-custom-color sm:text-4xl text-center'>
             Become a Certified Cloud Native Applied Generative AI Engineer
           </h2>
           {/* <p className="mt-2 text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">
             Mastering Cloud Native and Physical AI for the Next Technological
             Frontier
           </p> */}
-          <p className="mt-6 paragraph-center">
+          <p className='mt-6 paragraph-center'>
             The future of Generative AI and cloud-native computing is poised to
             ignite the most transformative industrial revolution in human
             history, projected to drive a{' '}
@@ -28,9 +29,18 @@ export default function CarouselSection() {
             society, unlocking new potentials and opportunities that were once
             unimaginable. We stand at the brink of an era where intelligent,
             scalable systems will be at the heart of global progress, driving
-            the biggest leap forward in the history of mankind.
+            the biggest leap forward in the history of mankind.
           </p>
-          <p className="mt-6 paragraph-center">
+          <div className=' mt-6 '>
+            <Image
+              width={1920}
+              height={1080}
+              src={ParagraphImage}
+              alt=''
+              className='aspect-[3/2] md:aspect-[4/2] object-cover rounded-3xl'
+            />
+          </div>
+          <p className='mt-6 paragraph-center'>
             Today&apos;s pivotal technological trends are Cloud Native (CN),
             Generative AI (GenAI), and Physical AI. Cloud Native technology
             offers a scalable and dependable platform for application operation,
@@ -42,7 +52,7 @@ export default function CarouselSection() {
             and Physical AI developer globally.
           </p>
 
-          <p className="mt-2 paragraph-center">
+          <p className='mt-2 paragraph-center'>
             {/* As the world rapidly embraces Cloud Native and Physical AI
             technologies, we stand on the edge of a new era of innovation.These
             advancements are set to revolutionize industries by enabling
@@ -57,13 +67,13 @@ export default function CarouselSection() {
             to develop world-class AI applications, driving both technological
             innovation and economic growth in the region.
           </p>
-          <p className="mt-2 paragraph-center">
+          <p className='mt-2 paragraph-center'>
             Join us and become part of the next generation of tech leaders.
-            <span className="font-semibold">The future is yours to shape!</span>
+            <span className='font-semibold'>The future is yours to shape!</span>
           </p>
         </div>
         <CarouselPlugin />
       </div>
     </div>
-  );
+  )
 }

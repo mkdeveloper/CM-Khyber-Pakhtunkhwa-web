@@ -3,7 +3,7 @@ import { CoreLevel, MasteryLevel, PhysicalAI } from './CourseData'
 
 export default function CourseSection() {
   return (
-    <div className='bg-white py-24 sm:py-32'>
+    <div className='bg-white py-24'>
       <div className='mx-auto max-w-7xl px-6 lg:px-8'>
         <div className='mx-auto max-w-6xl text-center'>
           <h2
