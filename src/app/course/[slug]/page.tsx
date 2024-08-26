@@ -32,9 +32,9 @@ const getData = async ({ pathname }: { pathname: string }) => {
   }
 
   const pathName = ForwardRequest(pathname);
-  console.log(pathName);
+  console.log(pathname);
 
-  const res = await fetch(`${baseUrl}/api/${pathname}`, {
+  const res = await fetch(`${baseUrl}/api/${pathName}`, {
     cache: 'force-cache',
   });
 
