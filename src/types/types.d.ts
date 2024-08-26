@@ -14,7 +14,7 @@ export type Outline = {
 export type CourseData = {
   id: number;
   mainTitle: string;
-  quarter: string;
+  quarter?: string;
   description: string[];
   outline: Outline[];
 };
