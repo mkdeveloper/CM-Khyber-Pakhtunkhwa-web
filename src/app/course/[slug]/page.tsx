@@ -1,6 +1,25 @@
 import { possibleRoutes } from '@/constants/constants'
 import { CourseData } from '@/types/types'
-import { ForwardRequest, GetChildComponent } from '@/lib/helper-functions'
+import { GetChildComponent } from '@/lib/helper-functions'
+
+function ForwardRequest(pathname: string) {
+  switch (pathname) {
+    case 'introduction':
+      return 'course/introduction'
+    case 'q1':
+    case 'q2':
+    case 'q3':
+      return `course/core/${pathname}`
+    case 'q4':
+    case 'q5':
+    case 'q6':
+      return `course/mastery/${pathname}`
+    case 'q7':
+      return `course/physical/${pathname}`
+    default:
+      return `course/optional/${pathname}`
+  }
+}
 
 const getData = async ({ pathname }: { pathname: string }) => {
   // const baseUrl =
@@ -13,10 +32,10 @@ const getData = async ({ pathname }: { pathname: string }) => {
   }
 
   const pathName = ForwardRequest(pathname)
-  console.log(pathName)
+  console.log(pathname)
 
   const res = await fetch(`${baseUrl}/api/${pathName}`, {
-    // cache: 'force-cache',
+    cache: 'force-cache',
   })
 
   if (!res.ok) {
