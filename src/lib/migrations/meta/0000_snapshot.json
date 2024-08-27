@@ -1,5 +1,5 @@
 {
-  "id": "4c53f565-5921-4cf4-986c-20ce414e5065",
+  "id": "95b1ee34-df08-4238-94fc-3feaa0383c5d",
   "prevId": "00000000-0000-0000-0000-000000000000",
   "version": "7",
   "dialect": "postgresql",
@@ -16,13 +16,13 @@
         },
         "full_name": {
           "name": "full_name",
-          "type": "text",
+          "type": "varchar(255)",
           "primaryKey": false,
           "notNull": true
         },
         "father_name": {
           "name": "father_name",
-          "type": "text",
+          "type": "varchar(255)",
           "primaryKey": false,
           "notNull": true
         },
@@ -40,19 +40,19 @@
         },
         "city": {
           "name": "city",
-          "type": "text",
+          "type": "varchar(255)",
           "primaryKey": false,
           "notNull": true
         },
         "email": {
           "name": "email",
-          "type": "text",
+          "type": "varchar(255)",
           "primaryKey": false,
           "notNull": true
         },
         "gender": {
           "name": "gender",
-          "type": "text",
+          "type": "varchar(255)",
           "primaryKey": false,
           "notNull": true
         },
@@ -137,7 +137,7 @@
       "columns": {
         "email": {
           "name": "email",
-          "type": "text",
+          "type": "varchar(255)",
           "primaryKey": false,
           "notNull": true
         },
@@ -152,7 +152,7 @@
           "type": "timestamp",
           "primaryKey": false,
           "notNull": true,
-          "default": "'2024-08-21 14:40:59.907'"
+          "default": "'2024-08-27 09:57:52.304'"
         }
       },
       "indexes": {
@@ -188,25 +188,25 @@
         },
         "title": {
           "name": "title",
-          "type": "varchar",
+          "type": "varchar(255)",
           "primaryKey": false,
           "notNull": true
         },
         "industry": {
           "name": "industry",
-          "type": "varchar",
+          "type": "varchar(255)",
           "primaryKey": false,
           "notNull": true
         },
         "company_name": {
           "name": "company_name",
-          "type": "varchar",
+          "type": "varchar(255)",
           "primaryKey": false,
           "notNull": true
         },
         "years_of_experience": {
           "name": "years_of_experience",
-          "type": "varchar",
+          "type": "varchar(255)",
           "primaryKey": false,
           "notNull": true
         },
@@ -242,7 +242,7 @@
         },
         "status": {
           "name": "status",
-          "type": "text",
+          "type": "varchar(50)",
           "primaryKey": false,
           "notNull": true
         },
@@ -251,10 +251,46 @@
           "type": "date",
           "primaryKey": false,
           "notNull": false
+        },
+        "user_id": {
+          "name": "user_id",
+          "type": "serial",
+          "primaryKey": false,
+          "notNull": true
         }
       },
-      "indexes": {},
-      "foreignKeys": {},
+      "indexes": {
+        "idx_user_id": {
+          "name": "idx_user_id",
+          "columns": [
+            {
+              "expression": "user_id",
+              "isExpression": false,
+              "asc": true,
+              "nulls": "last"
+            }
+          ],
+          "isUnique": false,
+          "concurrently": false,
+          "method": "btree",
+          "with": {}
+        }
+      },
+      "foreignKeys": {
+        "entrance_exam_result_user_id_applied_user_id_fk": {
+          "name": "entrance_exam_result_user_id_applied_user_id_fk",
+          "tableFrom": "entrance_exam_result",
+          "tableTo": "applied_user",
+          "columnsFrom": [
+            "user_id"
+          ],
+          "columnsTo": [
+            "id"
+          ],
+          "onDelete": "no action",
+          "onUpdate": "no action"
+        }
+      },
       "compositePrimaryKeys": {},
       "uniqueConstraints": {}
     }
