@@ -73,6 +73,8 @@ export default function Hero() {
                 </Link>
                 <Link
                   href={'/announcements'}
+                  target='_blank'
+                  rel='noopener noreferrer'
                   className={`bg-white whitespace-nowrap flex justify-between order-first sm:order-last items-center gap-3 py-4 px-4 relative font-semibold rounded-lg text-custom-color hover:bg-transparent duration-300 hover:scale-105  border border-custom-color`}
                 >
                   <svg
