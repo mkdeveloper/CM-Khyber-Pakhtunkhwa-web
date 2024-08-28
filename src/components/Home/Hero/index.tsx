@@ -114,6 +114,7 @@ export default function Hero() {
               </div>
             </div>
             <Image
+              priority
               src={CM_Image}
               alt=''
               className='aspect-square w-full max-w-lg rounded-2xl object-cover sm:mt-16 lg:mt-0 lg:max-w-none xl:row-span-2 xl:row-end-2'
