@@ -1,10 +1,11 @@
 'use client'
 import { Dialog, NavButtons } from './navbar'
 import { usePathname } from 'next/navigation'
-import Link from 'next/link'
+// import Link from 'next/link'
 import Image from 'next/image'
 import KP_Logo from '../../../public/kpk/kp_logo.png'
 import { cn } from '@/lib/utils'
+import { Link } from 'next-view-transitions'
 const Header = () => {
   const pathname = usePathname()
   return (

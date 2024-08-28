@@ -1,6 +1,7 @@
 'use client'
 import { cn } from '@/lib/utils'
-import Link from 'next/link'
+// import Link from 'next/link'
+import { Link } from 'next-view-transitions'
 import { MenuIcon } from 'lucide-react'
 import { FC, ReactNode } from 'react'
 import { usePathname } from 'next/navigation'
@@ -49,6 +50,8 @@ export const NavButtons: FC<NavButtonProps> = ({ className = '' }) => {
     <>
       {NavigationList.map((item) => (
         <Link
+          target={`${item.href === '/announcements' ? '_blank' : '_self'}`}
+          rel='noopener noreferrer'
           key={item.name}
           href={item.href}
           className={cn(

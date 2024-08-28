@@ -1,6 +1,6 @@
 import React from 'react'
 import Image from 'next/image'
-import Link from 'next/link'
+import { Link } from 'next-view-transitions'
 import { QcardsT } from '@/types/types'
 
 const CourseLevel = ({ level }: { level: QcardsT }) => {

@@ -12,6 +12,7 @@ import IbtisamAhmed from '../../../public/kpk/team/ibtisam.jpg'
 import Rehan from '../../../public/kpk/team/rehan.jpg'
 import JahanzaibTayyab from '../../../public/kpk/team/jehanzeb.jpg'
 import GirlAvatar from '../../../public/kpk/team/girl_avatar.jpg'
+import ImranAli from '../../../public/kpk/team/imran_bhai.jpg'
 export const team = [
   {
     name: 'Zia Khan',
@@ -32,6 +33,11 @@ export const team = [
     name: 'Ameen Alam',
     role: 'Multi-Cloud Solutions Architect',
     imageUrl: AmeenAlam,
+  },
+  {
+    name: 'Imran Ali',
+    role: 'Management Head PIAIC / GIAIC',
+    imageUrl: ImranAli,
   },
   {
     name: 'Muhammad Khubaib',
@@ -65,10 +71,11 @@ export const team = [
     imageUrl: UsmanAshraf,
   },
   {
-    name: 'Ayesha Nazish',
+    name: 'Ibtisam Anwar',
     role: 'Trainer PIAIC, Freelancer',
-    imageUrl: GirlAvatar,
+    imageUrl: IbtisamAhmed,
   },
+
   {
     name: 'Humera Aslam',
     role: 'Trainer PIAIC, Freelancer',
@@ -81,9 +88,9 @@ export const team = [
   },
 
   {
-    name: 'Ibtisam Ahmed',
+    name: 'Ayesha Nazish',
     role: 'Trainer PIAIC, Freelancer',
-    imageUrl: IbtisamAhmed,
+    imageUrl: GirlAvatar,
   },
   {
     name: 'Rehan',

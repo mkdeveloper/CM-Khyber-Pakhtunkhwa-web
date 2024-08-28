@@ -1,18 +1,18 @@
-'use client';
+'use client'
 
-import { useStore } from '@/components/hooks/use-store';
-import { cn } from '@/lib/utils';
-import { Sidebar } from '@/components/admin-panel/sidebar';
-import { useSidebarToggle } from '@/components/hooks/use-sidebar-toggle';
+import { useStore } from '@/components/hooks/use-store'
+import { cn } from '@/lib/utils'
+import { Sidebar } from '@/components/admin-panel/sidebar'
+import { useSidebarToggle } from '@/components/hooks/use-sidebar-toggle'
 
 export default function AdminPanelLayout({
   children,
 }: {
-  children: React.ReactNode;
+  children: React.ReactNode
 }) {
-  const sidebar = useStore(useSidebarToggle, (state) => state);
+  const sidebar = useStore(useSidebarToggle, (state) => state)
 
-  if (!sidebar) return null;
+  if (!sidebar) return null
 
   return (
     <>
@@ -26,5 +26,5 @@ export default function AdminPanelLayout({
         {children}
       </main>
     </>
-  );
+  )
 }

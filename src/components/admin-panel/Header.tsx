@@ -1,9 +1,16 @@
+'use client'
 import { Dialog, NavButtons } from '@/components/Header/navbar'
 import Link from 'next/link'
 import Image from 'next/image'
 import KP_Logo from '../../../public/kpk/kp_logo.png'
 import { cn } from '@/lib/utils'
+import { usePathname } from 'next/navigation'
+import { useStore } from '../hooks/use-store'
+import { useSidebarToggle } from '../hooks/use-sidebar-toggle'
+
 const CourseHeader = () => {
+  const sidebar = useStore(useSidebarToggle, (state) => state)
+  console.log(sidebar?.isOpen)
   return (
     <div
       className={`mx-auto max-w-7xl flex h-full w-full justify-between px-3 py-5 lg:py-6 max-md:max-w-full max-md:flex-wrap md:justify-center xl:justify-between`}
@@ -18,7 +25,9 @@ const CourseHeader = () => {
               //   placeholder='blur'
               width={100}
               height={100}
-              className=' h-28 w-auto outline-none'
+              className={`${
+                sidebar?.isOpen === true ? 'hidden' : 'h-28 w-auto outline-none'
+              }`}
               src={KP_Logo}
               alt='KPK GOV LOGO'
             />

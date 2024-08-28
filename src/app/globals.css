@@ -116,3 +116,17 @@ h4 {
 .headingThree {
   @apply text-xl;
 }
+
+/* body {
+  transition-property: opacity, transform, filter, background;
+  transition-timing-function: ease-in-out;
+  transition-duration: 500ms;
+  background-color: #1eb2a6;
+}
+
+.page-transition {
+  opacity: 0;
+  background: black;
+  transform: translateY(40px);
+  filter: blur(12px);
+} */

@@ -35,6 +35,8 @@
     "lucide-react": "^0.428.0",
     "next": "14.2.5",
     "next-themes": "^0.3.0",
+    "next-view-transitions": "^0.3.0",
+    "nextjs-toploader": "^2.6.12",
     "nodemailer": "^6.9.14",
     "react": "^18",
     "react-day-picker": "8.10.1",
