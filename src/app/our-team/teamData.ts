@@ -1,19 +1,28 @@
-import ZiaKhan from '../../../public/kpk/team/ziakhan.webp'
-import DaniyalNagori from '../../../public/kpk/team/daniyal_1.jpeg'
-import MuhammadQasim from '../../../public/kpk/team/qasim.jpeg'
-import SaadIrfan from '../../../public/kpk/team/saad_irfan.jpg'
-import KhubaibKhan from '../../../public/kpk/team/khubaib.png'
-import SajidKhan from '../../../public/kpk/team/sajid_khan.jpg'
-import AmeenAlam from '../../../public/kpk/team//ameen_alam.jpg'
-import MuhammadJunaidShaukat from '../../../public/kpk/team/junaid.jpg'
-import UsmanAshraf from '../../../public/kpk/team/usman_ashraf.jpg'
-import WaniaKazmi from '../../../public/kpk/team/wania_kazmi.jpeg'
-import IbtisamAhmed from '../../../public/kpk/team/ibtisam.jpg'
-import Rehan from '../../../public/kpk/team/rehan.jpg'
-import JahanzaibTayyab from '../../../public/kpk/team/jehanzeb.jpg'
-import GirlAvatar from '../../../public/kpk/team/girl_avatar.jpg'
-import ImranAli from '../../../public/kpk/team/imran_bhai.jpg'
+import ZiaKhan from '../../../public/kpk/team/ziakhan.webp';
+import DaniyalNagori from '../../../public/kpk/team/daniyal_1.jpeg';
+import MuhammadQasim from '../../../public/kpk/team/qasim.jpeg';
+import SaadIrfan from '../../../public/kpk/team/saad_irfan.jpg';
+import KhubaibKhan from '../../../public/kpk/team/khubaib.png';
+import SajidKhan from '../../../public/kpk/team/sajid_khan.jpg';
+import AmeenAlam from '../../../public/kpk/team//ameen_alam.jpg';
+import MuhammadJunaidShaukat from '../../../public/kpk/team/junaid.jpg';
+import UsmanAshraf from '../../../public/kpk/team/usman_ashraf.jpg';
+import WaniaKazmi from '../../../public/kpk/team/wania_kazmi.jpeg';
+import IbtisamAhmed from '../../../public/kpk/team/ibtisam.jpg';
+import Rehan from '../../../public/kpk/team/rehan.jpg';
+import JahanzaibTayyab from '../../../public/kpk/team/jehanzeb.jpg';
+import GirlAvatar from '../../../public/kpk/team/girl_avatar.jpg';
+import ImranAli from '../../../public/kpk/team/imran_bhai.jpg';
+import ZeeshanAziz from '../../../public/kpk/team/zeeshan_aziz.jpg';
+import HassanAli from '../../../public/kpk/team/hassan_ali_khan.jpg';
+import HamzaSyed from '../../../public/kpk/team/hamza_syed.jpg';
+import MeenaKhan from '../../../public/kpk/meena_khan.jpg';
 export const team = [
+  {
+    name: 'Meena Khan Afridi',
+    role: 'Minister Higher Education, Archives & Libraries',
+    imageUrl: MeenaKhan,
+  },
   {
     name: 'Zia Khan',
     role: 'CEO of Panacloud / COO PIAIC',
@@ -66,6 +75,11 @@ export const team = [
     imageUrl: WaniaKazmi,
   },
   {
+    name: 'Hamza Syed',
+    role: 'Trainer PIAIC, Freelancer',
+    imageUrl: HamzaSyed,
+  },
+  {
     name: 'Usman Ashraf',
     role: 'Trainer PIAIC, Freelancer',
     imageUrl: UsmanAshraf,
@@ -102,4 +116,25 @@ export const team = [
     role: 'Trainer PIAIC, Freelancer',
     imageUrl: JahanzaibTayyab,
   },
-]
+  // new members
+  {
+    name: 'Jahanzaib Tayyab',
+    role: 'Trainer PIAIC, Freelancer',
+    imageUrl: JahanzaibTayyab,
+  },
+  {
+    name: 'Mubarra Naz',
+    role: 'Trainer PIAIC, Freelancer',
+    imageUrl: GirlAvatar,
+  },
+  {
+    name: 'Hassan Ali Khan',
+    role: 'Trainer PIAIC, Freelancer',
+    imageUrl: HassanAli,
+  },
+  {
+    name: 'Zeeshan Aziz',
+    role: 'Trainer PIAIC, Freelancer',
+    imageUrl: ZeeshanAziz,
+  },
+];
