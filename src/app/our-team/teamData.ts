@@ -116,12 +116,6 @@ export const team = [
     role: 'Trainer PIAIC, Freelancer',
     imageUrl: JahanzaibTayyab,
   },
-  // new members
-  {
-    name: 'Jahanzaib Tayyab',
-    role: 'Trainer PIAIC, Freelancer',
-    imageUrl: JahanzaibTayyab,
-  },
   {
     name: 'Mubarra Naz',
     role: 'Trainer PIAIC, Freelancer',
