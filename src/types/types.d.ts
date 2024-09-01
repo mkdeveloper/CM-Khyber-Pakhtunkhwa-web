@@ -25,6 +25,7 @@ export type EntranceCardT = {
   cnic: string;
   dateOfRegistration: Date | string;
   studentId: string;
+  senderEmail: string;
 };
 
 export type EntranceCardRequirementsT = {
