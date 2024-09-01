@@ -36,7 +36,7 @@ const EntranceCardPage = () => {
 
   return (
     <div>
-      <EntranceCard />
+      <EntranceCard orgEmail={Email!} />
     </div>
   );
 };

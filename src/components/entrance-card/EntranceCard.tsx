@@ -18,7 +18,7 @@ import { toast } from 'sonner';
 import { EntranceCardT } from '@/types/types';
 import DownloadEntranceCard from '@/components/DownloadCard';
 
-const EntranceCard = () => {
+const EntranceCard = ({ orgEmail }: { orgEmail: string }) => {
   const [loading, setloading] = useState(false);
   const [cardData, setCardData] = useState<EntranceCardT | null>(null);
 
@@ -54,7 +54,7 @@ const EntranceCard = () => {
     toast.promise(getCard(data), {
       loading: `Getting Your Card ...`,
       success: (data: EntranceCardT) => {
-        setCardData(data);
+        setCardData({ ...data, senderEmail: orgEmail });
         setloading(false);
         return `Download Your Card`;
       },

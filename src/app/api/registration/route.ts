@@ -1,45 +1,45 @@
-import { NextRequest, NextResponse } from "next/server";
-import { db } from "@/lib/drizzle";
-import { eq, or, and } from "drizzle-orm";
-import { UsersTable } from "@/lib/schema/users";
-import { formCities, formQualifications } from "@/constants/constants";
-import { otpCodes } from "@/lib/schema/otpCodes";
-import sendEmail from "@/lib/transporter";
-import RegistrationConfirmation from "../../../../emailTemplates/registrationconfirmation";
+import { NextRequest, NextResponse } from 'next/server';
+import { db } from '@/lib/drizzle';
+import { eq, or, and } from 'drizzle-orm';
+import { UsersTable } from '@/lib/schema/users';
+import { formCities, formQualifications } from '@/constants/constants';
+import { otpCodes } from '@/lib/schema/otpCodes';
+import sendEmail from '@/lib/transporter';
+import RegistrationConfirmation from '../../../../emailTemplates/registrationconfirmation';
 
 const validateInput = (input: any) => {
   const errors = [];
 
   if (input.fullName.length < 3 || input.fullName.length > 255) {
-    errors.push("Invalid Full name length!");
+    errors.push('Invalid Full name length!');
   }
 
   if (input.fatherName.length < 3 || input.fatherName.length > 255) {
-    errors.push("Invalid Full name length!");
+    errors.push('Invalid Full name length!');
   }
 
   if (input.email.length > 255) {
-    errors.push("Invalid Email length!");
+    errors.push('Invalid Email length!');
   }
 
   if (!formCities.includes(input.city)) {
-    errors.push("Invalid City!");
+    errors.push('Invalid City!');
   }
 
   if (!formQualifications.includes(input.highestQualification)) {
-    errors.push("Invalid Qualification!");
+    errors.push('Invalid Qualification!');
   }
 
   if (input.phoneNumber.toString().length !== 11) {
-    errors.push("Invalid phone number length!");
+    errors.push('Invalid phone number length!');
   }
 
   if (input.cnic.toString().length !== 13) {
-    errors.push("Invalid cnic length!");
+    errors.push('Invalid cnic length!');
   }
 
-  if (input.gender !== "female" && input.gender !== "male") {
-    errors.push("Invalid Gender");
+  if (input.gender !== 'female' && input.gender !== 'male') {
+    errors.push('Invalid Gender');
   }
 
   if (
@@ -53,18 +53,18 @@ const validateInput = (input: any) => {
     !input.dateOfBirth ||
     !input.otp
   ) {
-    errors.push("Fields are empty!");
+    errors.push('Fields are empty!');
   }
 
   return errors;
 };
 
 export async function POST(request: NextRequest) {
-  const origin = request.headers.get("origin");
+  const origin = request.headers.get('origin');
   const expectedOrigin = process.env.BASE_URL;
 
   if (origin !== expectedOrigin) {
-    return new Response(JSON.stringify({ message: "Invalid origin" }), {
+    return new Response(JSON.stringify({ message: 'Invalid origin' }), {
       status: 403,
     });
   }
@@ -90,7 +90,7 @@ export async function POST(request: NextRequest) {
 
     if (oldUsers.length > 0) {
       throw new Error(
-        "An application with this email, CNIC or phone number already exists."
+        'An application with this email, CNIC or phone number already exists.'
       );
     }
 
@@ -102,7 +102,7 @@ export async function POST(request: NextRequest) {
       );
 
     if (otpUsers.length === 0) {
-      throw new Error("Incorrect OTP Entered!");
+      throw new Error('Incorrect OTP Entered!');
     }
 
     const otpUser = otpUsers[0];
@@ -111,7 +111,7 @@ export async function POST(request: NextRequest) {
     const currentTime = new Date().getTime();
 
     if (expiryTime < currentTime) {
-      throw new Error("OTP expired. Please click on SEND OTP button.");
+      throw new Error('OTP expired. Please click on SEND OTP button.');
     }
 
     const users = await db.insert(UsersTable).values(input).returning();
@@ -119,15 +119,16 @@ export async function POST(request: NextRequest) {
 
     await sendEmail({
       to: input.email,
-      subject: "Addmision Confirmation",
+      subject: 'Addmision Confirmation',
       html: RegistrationConfirmation({
         userName: input.fullName,
-        regNumber: `${user.id}`.padStart(8, "0"),
+        regNumber: `${user.id}`.padStart(8, '0'),
+        senderEmail: process.env.USER_EMAIL!,
       }),
     });
 
     return NextResponse.json({
-      message: "Applied Successfully",
+      message: 'Applied Successfully',
       users,
     });
   } catch (error: any) {

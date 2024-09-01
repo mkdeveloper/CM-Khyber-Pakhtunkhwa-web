@@ -1,9 +1,9 @@
-import { NextRequest, NextResponse } from "next/server";
-import { db } from "@/lib/drizzle";
-import { otpCodes } from "@/lib/schema/otpCodes";
-import { eq } from "drizzle-orm";
-import sendEmail from "@/lib/transporter";
-import sendEmailtemplate from "../../../../emailTemplates/sendotp";
+import { NextRequest, NextResponse } from 'next/server';
+import { db } from '@/lib/drizzle';
+import { otpCodes } from '@/lib/schema/otpCodes';
+import { eq } from 'drizzle-orm';
+import sendEmail from '@/lib/transporter';
+import sendEmailtemplate from '../../../../emailTemplates/sendotp';
 
 const generateOtp = () => Math.floor(100000 + Math.random() * 900000);
 
@@ -17,8 +17,11 @@ const sendOtpEmail = async (email: string, code: number) => {
   // console.log("Sending email to:", email);
   await sendEmail({
     to: email,
-    subject: "Email Verification",
-    html: sendEmailtemplate(code),
+    subject: 'Email Verification',
+    html: sendEmailtemplate({
+      code,
+      senderEmail: process.env.USER_EMAIL!,
+    }),
   });
   // console.log("Email sent successfully!");
 };
@@ -48,11 +51,11 @@ const updateOtpCode = async (email: string, code: number, expiryTime: Date) => {
 };
 
 export async function POST(request: NextRequest) {
-  const origin = request.headers.get("origin");
+  const origin = request.headers.get('origin');
   const expectedOrigin = process.env.BASE_URL;
 
   if (origin !== expectedOrigin) {
-    return new Response(JSON.stringify({ message: "Invalid origin" }), {
+    return new Response(JSON.stringify({ message: 'Invalid origin' }), {
       status: 403,
     });
   }
@@ -60,7 +63,7 @@ export async function POST(request: NextRequest) {
   const { email } = await request.json();
 
   if (!email) {
-    throw new Error("Enter your email!");
+    throw new Error('Enter your email!');
   }
 
   const code = generateOtp();
@@ -74,7 +77,7 @@ export async function POST(request: NextRequest) {
     await sendOtpEmail(email, code);
 
     return NextResponse.json({
-      message: "OTP sent successfully. Please check your email.",
+      message: 'OTP sent successfully. Please check your email.',
     });
   } catch (error: any) {
     // console.error("Error:", error);
