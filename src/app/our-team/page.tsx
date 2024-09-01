@@ -190,7 +190,7 @@ export default function OurTeam() {
             <div className='mt-6 flex   gap-x-8 gap-y-20'>
               <div className='lg:w-full  lg:flex-auto'>
                 <p className='paragraph-center'>
-                  The CM KPK Initiative for Generative AI and Cloud Computing
+                  The CM KP Initiative for Generative AI and Cloud Computing
                   program is dedicated to preparing individuals for the
                   transformative era of Generative AI.To empower individuals
                   with cutting-edge skills in Cloud Native and Physical AI

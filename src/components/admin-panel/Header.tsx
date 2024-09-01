@@ -19,7 +19,7 @@ const CourseHeader = () => {
         <div className='flex lg:flex-1 outline-none'>
           <Link href='/' className='-m-1.5 p-1.5 outline-none'>
             <span className='sr-only'>
-              KPK Initiative for Generative AI and Cloud Computing
+              KP Initiative for Generative AI and Cloud Computing
             </span>
             <Image
               //   placeholder='blur'
@@ -29,7 +29,7 @@ const CourseHeader = () => {
                 sidebar?.isOpen === true ? 'hidden' : 'h-28 w-auto outline-none'
               }`}
               src={KP_Logo}
-              alt='KPK GOV LOGO'
+              alt='KP GOV LOGO'
             />
           </Link>
         </div>

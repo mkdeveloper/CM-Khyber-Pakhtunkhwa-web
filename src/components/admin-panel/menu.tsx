@@ -39,7 +39,7 @@ export function Menu({ isOpen }: MenuProps) {
                   height={100}
                   className=' h-28 w-auto outline-none shrink-0'
                   src={KP_Logo}
-                  alt='KPK GOV LOGO'
+                  alt='KP GOV LOGO'
                 />
               </Link>
               <h3 className='font-bold text-2xl text-custom-color'>

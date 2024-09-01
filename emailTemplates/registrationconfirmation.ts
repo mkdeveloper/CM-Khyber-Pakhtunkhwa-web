@@ -2,15 +2,15 @@ const RegistrationConfirmation = ({
   userName,
   regNumber,
 }: {
-  userName: string;
-  regNumber: string;
+  userName: string
+  regNumber: string
 }) => {
   return `<!DOCTYPE html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
     <title>
-      Welcome to CM KPK Initiative for Generative AI and Cloud Computing
+      Welcome to CM KP Initiative for Generative AI and Cloud Computing
     </title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -103,7 +103,7 @@ const RegistrationConfirmation = ({
       <div class="logo">
         <img
           src="https://kp.gov.pk/design_section/front/upgrade/resources/assets/KP_logo.png"
-          alt="CM KPK Initiative Logo"
+          alt="CM KP Initiative Logo"
         />
       </div>
       <div class="greeting">Dear ${userName},</div>
@@ -111,7 +111,7 @@ const RegistrationConfirmation = ({
         <p>
           Thank you for registering for the
           <strong class="pg-name"
-            >CM KPK Initiative for Generative AI and Cloud Computing</strong
+            >CM KP Initiative for Generative AI and Cloud Computing</strong
           >
           program in Peshawar!
         </p>
@@ -179,9 +179,9 @@ const RegistrationConfirmation = ({
         /></a>
       </div>
       <div class="footer">
-        <p>&copy; 2024 CM KPK Initiative. All rights reserved.</p>
+        <p>&copy; 2024 CM KP Initiative. All rights reserved.</p>
         <p>
-          You are receiving this email because you registered for the CM KPK
+          You are receiving this email because you registered for the CM KP
           Initiative.
         </p>
         <p>
@@ -196,7 +196,7 @@ const RegistrationConfirmation = ({
     </div>
   </body>
 </html>
-`;
-};
+`
+}
 
-export default RegistrationConfirmation;
+export default RegistrationConfirmation

@@ -29,29 +29,12 @@ export default function Footer() {
                   height={200}
                   className=' h-28 w-full max-w-[110px] mx-auto outline-none'
                   src={KP_Logo}
-                  alt='KPK GOV LOGO'
+                  alt='KP GOV LOGO'
                 />
               </div>
               <p className=' text-base leading-6 text-center text-gray-600'>
-                CM KPK Initiative for Generative AI and Cloud Computing.
+                CM KP Initiative for Generative AI and Cloud Computing.
               </p>
-              {/* <div className='flex space-x-6 justify-center'>
-                {navigationData.social.map((item) => (
-                  <a
-                    key={item.name}
-                    href={item.href}
-                    className='text-gray-500 hover:text-gray-400'
-                  >
-                    <span className='sr-only'>{item.name}</span>
-                    <item.icon className='h-6 w-6' aria-hidden='true' />
-                  </a>
-                ))}
-              </div>
-              <div className='border-t border-white/10 text-center'>
-                <p className='text-sm leading-6 text-gray-600'>
-                  &copy; 2024 KPK, GOV. All rights reserved.
-                </p>
-              </div> */}
             </div>
             <div className='mt-8 grid grid-cols-2 sm:grid-cols-3  max-w-3xl mx-auto xl:mt-0'>
               <div className='text-center'>
@@ -122,7 +105,7 @@ export default function Footer() {
             </div>
             <div className='border-t border-white/10 text-center'>
               <p className='text-sm leading-6 text-gray-600 tracking-wider'>
-                &copy; 2024 KPK, GOV. All rights reserved.
+                &copy; 2024 KP, GOV. All rights reserved.
               </p>
             </div>
           </div>

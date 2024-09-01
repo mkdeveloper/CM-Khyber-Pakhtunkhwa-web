@@ -23,7 +23,7 @@ export default function Hero() {
                   height={100}
                   className=' h-28 w-auto outline-none'
                   src={KP_Logo}
-                  alt='KPK GOV LOGO'
+                  alt='KP GOV LOGO'
                 />
               </Link>
             </div>
