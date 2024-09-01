@@ -3,18 +3,19 @@ import { NextResponse } from 'next/server';
 export async function GET() {
   return NextResponse.json({
     id: 1,
-    mainTitle: 'Certified Cloud Native Applied Generative AI Engineer',
+    mainTitle:
+      'Certified Cloud Native Applied Generative Artificial Intelligence Engineer',
     quarter:
-      'Master the Future: Getting You Ready For The $100 Trillion AI Industrial Revolution',
+      'Master the Future: Getting You Ready For The $1.8 Trillion Artificial Intelligence Industrial Revolution',
     description: [
-      "Today's pivotal technological trends are Cloud Native (CN), Generative AI (GenAI), and Physical AI. Cloud Native technology offers a scalable and dependable platform for application operation, while AI equips these applications with intelligent, human-like capabilities. Physical AI aims to bridge the gap between digital intelligence and physical capability, creating systems that can understand and interact with the world in a human-like manner. Our aim is to train you to excel as a Cloud Native Applied Generative and Physical AI developer globally.",
+      "Today's pivotal technological trends are Cloud Native (CN), Generative Artificial Intelligence (GenAI), and Physical AI. Cloud Native technology offers a scalable and dependable platform for application operation, while AI equips these applications with intelligent, human-like capabilities. Physical AI aims to bridge the gap between digital intelligence and physical capability, creating systems that can understand and interact with the world in a human-like manner. Our aim is to train you to excel as a Cloud Native Applied Generative and Physical AI developer globally.",
       'The Cloud Native Applied Generative AI Certification program equips you to create leading-edge Cloud Native AI and Physical AI solutions using a comprehensive cloud-native, AI, and Physical AI platform.',
       'Everything will soon be represented by a conversational interface, or to put it another way, a personal AI, we will cover it extensively in this program. Currently, OpenAI Custom GPT Platform is the best platform to develop personal AI.',
       'We will also be covering AI agents, which are autonomous programs or entities that perceive their environment through sensors, process this information, and take actions to achieve specific goals or tasks. They can operate independently, adapt to changing conditions, and make decisions based on their observations and objectives.',
     ],
     outline: [
       {
-        title: 'Material to Understand the Coming AI Age',
+        title: 'Material to Understand the Coming Artificial Intelligence Age',
         children: [
           {
             type: 'video',
