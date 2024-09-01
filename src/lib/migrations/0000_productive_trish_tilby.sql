@@ -16,7 +16,7 @@ CREATE TABLE IF NOT EXISTS "applied_user" (
 CREATE TABLE IF NOT EXISTS "otp_codes" (
 	"email" varchar(255) NOT NULL,
 	"code" integer NOT NULL,
-	"expiry_date" timestamp DEFAULT '2024-08-27 09:57:52.304' NOT NULL
+	"expiry_date" timestamp DEFAULT '2024-09-01 08:16:53.706' NOT NULL
 );
 --> statement-breakpoint
 CREATE TABLE IF NOT EXISTS "experiences" (

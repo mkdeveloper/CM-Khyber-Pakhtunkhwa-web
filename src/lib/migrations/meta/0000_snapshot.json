@@ -1,5 +1,5 @@
 {
-  "id": "95b1ee34-df08-4238-94fc-3feaa0383c5d",
+  "id": "a55e3ba3-f79f-4987-ba6d-3dafe4a58840",
   "prevId": "00000000-0000-0000-0000-000000000000",
   "version": "7",
   "dialect": "postgresql",
@@ -152,7 +152,7 @@
           "type": "timestamp",
           "primaryKey": false,
           "notNull": true,
-          "default": "'2024-08-27 09:57:52.304'"
+          "default": "'2024-09-01 08:16:53.706'"
         }
       },
       "indexes": {
