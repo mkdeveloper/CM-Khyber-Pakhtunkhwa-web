@@ -51,20 +51,20 @@ export default function Hero() {
           aria-hidden='true'
         />
         <div className='mx-auto max-w-7xl  px-6 py-10 lg:py-28 lg:px-8'>
-          <div className='mx-auto max-w-2xl lg:mx-0 lg:grid lg:max-w-none lg:grid-cols-2 lg:gap-x-16 lg:gap-y-6 xl:grid-cols-1 xl:grid-rows-1 xl:gap-x-8'>
-            <h1 className='max-w-2xl text-4xl font-bold tracking-tight text-custom-color sm:text-5xl lg:col-span-2 xl:col-auto'>
+          <div className='mx-auto max-w-2xl lg:mx-0 lg:grid lg:max-w-none lg:grid-cols-2  lg:gap-y-6 xl:grid-cols-1 xl:grid-rows-1 xl:gap-x-8'>
+            <h1 className='max-w-2xl text-4xl font-bold tracking-tight text-custom-color sm:text-5xl lg:col-auto'>
               Chief Minister Khyber Pakhtunkhwa Initiative for Generative
               Artificial Intelligence and Cloud Computing
             </h1>
-            <div className='mt-6 max-w-xl lg:mt-0 xl:col-end-1 xl:row-start-1'>
+            <div className='mt-6 max-w-xl lg:mt-0  lg:col-end-1 lg:row-start-1'>
               <p className='text-2xl font-semibold leading-8 text-gray-900'>
                 Getting Khyber Pakhtunkhwa Ready For The $1.8 Trillion
                 <br /> Global Artificial Intelligence Industrial Revolution
               </p>
-              <div className='my-10 flex sm:items-center items-start  flex-col sm:flex-row gap-6 '>
+              <div className='my-10 flex sm:items-center items-start flex-col sm:flex-row gap-6'>
                 <Link
                   href={'/registration'}
-                  className={`bg-custom-color whitespace-nowrap py-4 px-4 order-last sm:order-first font-semibold relative rounded-lg text-white hover:bg-transparent duration-300 hover:text-custom-color border border-custom-color`}
+                  className='bg-custom-color whitespace-nowrap py-4 px-4 order-last sm:order-first font-semibold relative rounded-lg text-white hover:bg-transparent duration-300 hover:text-custom-color border border-custom-color'
                 >
                   GET STARTED NOW{' '}
                   <span aria-hidden='true' className='pl-2'>
@@ -75,7 +75,7 @@ export default function Hero() {
                   href={'/announcements'}
                   target='_blank'
                   rel='noopener noreferrer'
-                  className={`bg-white whitespace-nowrap flex justify-between order-first sm:order-last items-center gap-3 py-4 px-2 sm:px-4 relative font-semibold rounded-lg text-custom-color hover:bg-transparent duration-300 hover:scale-105  border border-custom-color`}
+                  className='bg-white whitespace-nowrap flex justify-between order-first sm:order-last items-center gap-3 py-4 px-2 sm:px-4 relative font-semibold rounded-lg text-custom-color hover:bg-transparent duration-300 hover:scale-105 border border-custom-color'
                 >
                   <svg
                     xmlns='http://www.w3.org/2000/svg'
@@ -108,17 +108,19 @@ export default function Hero() {
                       clipRule='evenodd'
                     ></path>
                   </svg>
-                  JOIN OUR WHATSAPP CHANNEL{' '}
-                  {/* <span className="-ml-[0.5rem]">→</span> */}
+                  JOIN OUR WHATSAPP CHANNEL
                 </Link>
               </div>
             </div>
-            <Image
-              priority
-              src={CM_Image}
-              alt=''
-              className='aspect-square w-full max-w-lg rounded-2xl object-cover sm:mt-16 lg:mt-0 lg:max-w-none xl:row-span-2 xl:row-end-2'
-            />
+            <div className='w-full mx-auto max-w-lg rounded-2xl sm:mt-16 lg:mt-0 lg:max-w-none lg:row-span-2 lg:row-end-2 col-span-2'>
+              <Image
+                priority
+                src={CM_Image}
+                alt=''
+                className='w-full h-full relative -top-10  rounded-2xl object-cover'
+                // style={{ minWidth: '300px', minHeight: '300px' }} // Add a minimum size to prevent shrinking
+              />
+            </div>
           </div>
         </div>
         <div className='absolute inset-x-0 bottom-0 -z-10 h-24 bg-gradient-to-t from-white sm:h-32' />
