@@ -104,7 +104,7 @@ const Registeration = () => {
             href="/entrance-card"
             className="font-semibold leading-6 pl-2 text-custom-color underline underline-offset-4"
           >
-            Get Admit Card
+            Get Exam Entrance Card
           </Link>
         </p>
       </div>
