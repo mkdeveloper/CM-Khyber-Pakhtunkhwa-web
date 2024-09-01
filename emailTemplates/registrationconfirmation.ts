@@ -1,9 +1,11 @@
 const RegistrationConfirmation = ({
   userName,
   regNumber,
+  senderEmail,
 }: {
-  userName: string
-  regNumber: string
+  userName: string;
+  regNumber: string;
+  senderEmail: string;
 }) => {
   return `<!DOCTYPE html>
 <html lang="en">
@@ -143,8 +145,8 @@ const RegistrationConfirmation = ({
         <p>
           If you have any questions or need assistance, please don't hesitate to
           reach out to us at
-          <a href="mailto:khubaib.mk@gmail.com" target="_blank"
-            >khubaib.mk@gmail.com</a
+          <a href="mailto:${senderEmail}" target="_blank"
+            >${senderEmail}</a
           >.
         </p>
         <p>Thank you for being a part of this nation-building journey.</p>
@@ -188,15 +190,15 @@ const RegistrationConfirmation = ({
           For any inquiries, visit
           <a href="https://cmkpk.org" target="_blank">cmkpk.org</a> or contact
           us at
-          <a href="mailto:khubaib.mk@gmail.com" target="_blank"
-            >khubaib.mk@gmail.com</a
+          <a href="mailto:${senderEmail}" target="_blank"
+            >${senderEmail}</a
           >.
         </p>
       </div>
     </div>
   </body>
 </html>
-`
-}
+`;
+};
 
-export default RegistrationConfirmation
+export default RegistrationConfirmation;

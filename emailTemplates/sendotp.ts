@@ -1,4 +1,10 @@
-function sendEmailtemplate(code: number) {
+function sendEmailtemplate({
+  code,
+  senderEmail,
+}: {
+  code: number;
+  senderEmail: string;
+}) {
   return `<!DOCTYPE html>
 <html lang="en">
   <head>
@@ -121,15 +127,15 @@ function sendEmailtemplate(code: number) {
           For any inquiries, visit
           <a href="https://cmkpk.org" target="_blank">cmkpk.org</a> or contact
           us at
-          <a href="mailto:khubaib.mk@gmail.com" target="_blank"
-            >khubaib.mk@gmail.com</a
+          <a href="mailto:${senderEmail}" target="_blank"
+            >${senderEmail}</a
           >.
         </p>
       </div>
     </div>
   </body>
 </html>
-`
+`;
 }
 
-export default sendEmailtemplate
+export default sendEmailtemplate;
