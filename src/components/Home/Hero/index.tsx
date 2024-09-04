@@ -62,7 +62,7 @@ export default function Hero() {
                 Artificial Intelligence Industrial Revolution
               </p>
               <p className="text-2xl text-custom-color mt-5 font-semibold leading-8 ">
-                Program is 100% Free.
+                Programme is 100% Free.
               </p>
               <div className="my-10 flex sm:items-center items-start flex-col sm:flex-row gap-6">
                 <Link
